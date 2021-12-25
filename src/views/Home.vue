@@ -1,6 +1,5 @@
 <template>
   <div class="fluid m-0 p-0">
-    <!-- <Login /> -->
     <Landing />
   </div>
 </template>

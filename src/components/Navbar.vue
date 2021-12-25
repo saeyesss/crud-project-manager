@@ -61,36 +61,36 @@
 </template>
 
 <script>
-import firebase from "firebase/compat/app";
+// import firebase from "firebase/compat/app";
 
-export default {
-  components: {},
-  data() {
-    return {
-      drawer: false,
+// export default {
+//   components: {},
+//   data() {
+//     return {
+//       drawer: false,
 
-      //add webpages to links array
-      links: [
-        { icon: "mdi-view-dashboard", text: "Dashboard", route: "/Dashboard" },
-        { icon: "mdi-account", text: "Account", route: "/AccountPage" },
-        { icon: "mdi-information-variant", text: "About", route: "/About" },
-      ],
-    };
-  },
-  methods: {
-    signOut() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          alert("Logged out");
-          this.$router.replace({
-            name: "Login",
-          });
-        });
-    },
-  },
-};
+//       //add webpages to links array
+//       links: [
+//         { icon: "mdi-view-dashboard", text: "Dashboard", route: "/Dashboard" },
+//         { icon: "mdi-account", text: "Account", route: "/AccountPage" },
+//         { icon: "mdi-information-variant", text: "About", route: "/About" },
+//       ],
+//     };
+//   },
+//   methods: {
+//     signOut() {
+//       firebase
+//         .auth()
+//         .signOut()
+//         .then(() => {
+//           alert("Logged out");
+//           this.$router.replace({
+//             name: "Login",
+//           });
+//         });
+//     },
+//   },
+// };
 </script>
 
 <style></style>

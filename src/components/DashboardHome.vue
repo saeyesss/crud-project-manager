@@ -2,14 +2,10 @@
   <v-app id="dashboardbg">
     <Navbar />
     <v-flex class="align-center">
-      <v-avatar size="80px">
-        <v-img src="person.avatar"></v-img>
-      </v-avatar>
-
       <span> <h1 class="display-4" id="weldas">Dashboard</h1></span>
     </v-flex>
     <v-container>
-      <v-layout row wrap col>
+      <!-- <v-layout row wrap col>
         <v-flex sm6 xs12 md6 lg3>
           <v-card class="ma-3">
             <v-list-item>
@@ -73,37 +69,17 @@
             </v-card-actions>
           </v-card>
         </v-flex>
-      </v-layout>
+      </v-layout> -->
     </v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-import { mapGetters } from "vuex";
-
-import BMI from "@/components/BMI";
-import BMR from "@/components/BMR";
-import idealw from "@/components/idealw";
-import bodyfat from "@/components/bodyfat";
 
 export default {
   components: {
     Navbar,
-    BMI,
-    BMR,
-    bodyfat,
-    idealw,
-  },
-  methods: {
-    showBMI() {},
-  },
-
-  computed: {
-    // map `this.user` to `this.$store.getters.user`
-    ...mapGetters({
-      user: "user",
-    }),
   },
 };
 </script>
