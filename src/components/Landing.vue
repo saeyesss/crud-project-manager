@@ -49,9 +49,9 @@ export default {
   image-rendering: -moz-crisp-edges; /* Firefox */
   image-rendering: -o-crisp-edges; /* Opera */
   image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
-
-  background-size: ;
   background-position: center;
+  float: left;
+  width: 100%;
 }
 #about {
   min-height: 40%;
