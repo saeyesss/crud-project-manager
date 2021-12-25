@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-row align="center">
-      <v-col
+    <v-row align="center" justify="center">
+      <!-- <v-col
         v-for="(link, i) in links"
         :key="i"
         class="text-center white--text"
@@ -17,15 +17,16 @@
           v-text="link.text"
         />
       </v-col>
-      <v-spacer></v-spacer>
-      <v-col cols="12" md="auto">
+      -->
+
+      <v-col cols="6" md="auto">
         <div
-          class="text-body-1 font-weight-light pt-6 pt-md-0 text-center white--text"
+          class="text-body-1 center caption pt-6 pt-md-0 text-center white--text"
         >
           {{ new Date().getFullYear() }}, Made with 💓
           <a
             id="linkcss"
-            href="https://github.com/saeyesss/healthcalculators"
+            href="https://github.com/saeyesss/crud-project-manager"
             class="text-decoration-none white--text"
             >Go to Git</a
           >
@@ -39,22 +40,18 @@
 export default {
   name: "links",
 
-  data: () => ({
-    links: [
-      {
-        href: "https://www.linkedin.com/in/vinol-fernandes/",
-        text: "Vinol Fernandes",
-      },
-      {
-        href: "https://www.linkedin.com/in/shreyas-n-1568b2228/",
-        text: "Shreyas N",
-      },
-      {
-        href: "https://www.linkedin.com/in/ranjan-ranjan-19a3bb1ab/",
-        text: "Ranjan Upadhya",
-      },
-    ],
-  }),
+  // data: () => ({
+  //   links: [
+  //     {
+  //       href: "https://www.linkedin.com/in/shreyas-n-1568b2228/",
+  //       text: "Shreyas N",
+  //     },
+  //     {
+  //       href: "",
+  //       text: "Shobhit Rai",
+  //     },
+  //   ],
+  // }),
 };
 </script>
 
@@ -63,7 +60,6 @@ export default {
   border-bottom: 0.05em solid #b4e7f8;
   box-shadow: inset 0 -0.05em 0 #b4e7f8;
   color: inherit;
-
   text-decoration: none;
 }
 #linkcss a:hover,

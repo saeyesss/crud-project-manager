@@ -1,16 +1,5 @@
 <template>
-  <v-footer id="default-footer" color="rgb(65,61,69)" padless>
-    <!-- <v-card flat tile class="white--text text-center" color="rgb(65,61,69)">
-      <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
-          <v-icon size="24px"> @mdi-linkedin </v-icon>
-        </v-btn>
-      </v-card-text>
-
-      <v-card-text class="white--text pt-0 ">
-       Our website focuses on giving a user friendly experience in helping you find various health calculators according to your needs
-      </v-card-text>
-    </v-card> -->
+  <v-footer id="default-footer" color="#123456" padless>
     <Links />
   </v-footer>
 </template>

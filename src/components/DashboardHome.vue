@@ -2,7 +2,7 @@
   <v-app id="dashboardbg">
     <Navbar />
     <v-flex class="align-center">
-      <span> <h1 class="display-4" id="weldas">Dashboard</h1></span>
+      <span> <h1 class="display-4" id="weldas">Projects</h1></span>
     </v-flex>
     <v-container>
       <!-- <v-layout row wrap col>
@@ -89,15 +89,15 @@ export default {
   color: #faf6f4;
   padding: 0.9em;
   font-weight: 900;
-  font-family: "Ultra", sans-serif;
   font-size: 36px;
   line-height: 42px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-shadow: 0 2px #0c6ff9, 0 3px #777;
+  font-family: "Helvetica Neue", "Helvetica";
 }
 #dashboardbg {
   background-color: indigo;
-  background: url("../assets/7.png") no-repeat center center;
+  background: url("../assets/11.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
