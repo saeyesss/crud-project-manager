@@ -71,39 +71,47 @@
 
 //
 <script>
-// import firebase from "firebase/compat/app";
-// export default {
-//   data() {
-//     return {
-//       darkTheme: true,
-//       platformName: "Register",
-//       form: { password: "", name: "", email: "" },
-//       error: null,
-//     };
-//   },
+import firebase from "firebase/compat/app";
 
-//   methods: {
-//     registerUser() {
-//       firebase
-//         .auth()
-//         .createUserWithEmailAndPassword(this.form.email, this.form.password)
-//         .then((data) => {
-//           data.user
-//             .updateProfile({
-//               displayName: this.form.name,
-//             })
-//             .then(() => {});
-//           alert("New User:" + data.user.displayName);
-//           this.$router.replace({ name: "Login" });
-//         })
-//         .catch((err) => {
-//           this.error = err.message;
-//           alert(this.error);
-//         });
-//     },
-//   },
-// };
-//
+export default {
+  data() {
+    return {
+      darkTheme: true,
+      platformName: "Register",
+      form: { password: "", name: "", email: "" },
+      error: null,
+    };
+  },
+
+  methods: {
+    registerUser() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.form.email, this.form.password)
+        .then((data) => {
+          data.user
+            .updateProfile({
+              displayName: this.form.name,
+            })
+            .then((data) => {
+              alert(
+                "Account Created! User Name:" +
+                  data.user.displayName +
+                  "\nUser ID: " +
+                  data.user.uid
+              );
+            })
+            .then(() => {
+              this.$router.replace({ name: "Login" });
+            });
+        })
+        .catch((err) => {
+          this.error = err.message;
+          alert(this.error);
+        });
+    },
+  },
+};
 </script>
 
 <style>

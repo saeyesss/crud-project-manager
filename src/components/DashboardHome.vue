@@ -5,6 +5,7 @@
       <span> <h1 class="display-4" id="weldas">Projects</h1></span>
     </v-flex>
     <v-container>
+      <!-- <AddProject /> -->
       <!-- <v-layout row wrap col>
         <v-flex sm6 xs12 md6 lg3>
           <v-card class="ma-3">
@@ -76,10 +77,11 @@
 
 <script>
 import Navbar from "@/components/Navbar";
-
+// import AddProject from "@/components/AddProject";
 export default {
   components: {
     Navbar,
+    // AddProject,
   },
 };
 </script>

@@ -78,51 +78,54 @@
 
 //
 <script>
-// import firebase from "firebase/compat/app";
+import firebase from "firebase/compat/app";
 
-// export default {
-//   data() {
-//     return {
-//       darkTheme: true,
-//       platformName: "Login",
-//       form: {
-//         email: "",
-//         password: "",
-//       },
-//       error: null,
-//     };
-//   },
+export default {
+  data() {
+    return {
+      darkTheme: true,
+      platformName: "Login",
+      form: {
+        email: "",
+        password: "",
+      },
+      error: null,
+    };
+  },
 
-//   methods: {
-//     loginEmail() {
-//       firebase
-//         .auth()
-//         .signInWithEmailAndPassword(this.form.email, this.form.password)
-//         .then((data) => {
-//           alert("Welcome " + data.user.displayName + " You are now logged in");
-//           this.$router.replace({ name: "Dashboard" });
-//         })
-//         .catch((err) => {
-//           this.error = err.message;
-//         });
-//     },
-//     loginGoogle() {
-//       const googleProvider = new firebase.auth.GoogleAuthProvider();
-//       firebase
-//         .auth()
-//         .signInWithPopup(googleProvider)
-//         .then((data) => {
-//           alert("Logged in with Google" + data.email);
-//           this.$router.replace({ name: "Dashboard" });
-//         })
-//         .catch((err) => {
-//           this.error = err.message;
-//           alert(this.error);
-//         });
-//     },
-//   },
-// };
-//
+  methods: {
+    loginEmail() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.form.email, this.form.password)
+        .then(() => {
+          alert("Welcome " + " You are now logged in");
+
+          this.$router.replace({ name: "Dashboard" });
+        })
+        .catch((err) => {
+          alert("Error logging in: " + err.message);
+        });
+    },
+    loginGoogle() {
+      const googleProvider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(googleProvider)
+        .then((data) => {
+          alert(
+            "Welcome " +
+              data.user.displayName +
+              ". You are now logged in with Google"
+          );
+          this.$router.replace({ name: "Dashboard" });
+        })
+        .catch((err) => {
+          alert("Error logging in: " + err.message);
+        });
+    },
+  },
+};
 </script>
 
 <style>

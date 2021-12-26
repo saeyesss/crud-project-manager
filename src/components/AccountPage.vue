@@ -5,15 +5,33 @@
       <span> <h1 class="display-4" id="accounthead">Account</h1></span>
     </div>
 
-    <v-container class="my-6" id="dashboard-view" tag="section"> </v-container>
+    <v-container class="my-6" id="dashboard-view" tag="section">
+      <div class="h1">hello</div>
+    </v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
+import firebase from "firebase/compat/app";
 export default {
   components: {
     Navbar,
+  },
+
+  methods: {
+    updateUserName() {
+      let newUserName = this.userName;
+      var user = firebase.auth().currentUser;
+      user
+        .updateProfile({ displayName: newUserName })
+        .then(() => {
+          alert("User Name updated successfully. Hello " + newUserName);
+        })
+        .catch((err) => {
+          alert("Error: " + err.message);
+        });
+    },
   },
 };
 </script>
