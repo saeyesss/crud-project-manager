@@ -6,7 +6,10 @@
     </div>
 
     <v-container class="my-6" id="dashboard-view" tag="section">
-      <div class="h1">hello</div>
+      <div>
+        <h1>UserName is {{ getUserDisplayName() }}</h1>
+        <h1>Email is {{ getUserEmail() }}</h1>
+      </div>
     </v-container>
   </v-app>
 </template>
@@ -18,8 +21,21 @@ export default {
   components: {
     Navbar,
   },
-
+  data() {
+    return {
+      displayName: "",
+      email: "",
+    };
+  },
   methods: {
+    getUserDisplayName() {
+      this.displayName = firebase.auth().currentUser.displayName;
+      return this.displayName;
+    },
+    getUserEmail() {
+      this.email = firebase.auth().currentUser.email;
+      return this.email;
+    },
     updateUserName() {
       let newUserName = this.userName;
       var user = firebase.auth().currentUser;

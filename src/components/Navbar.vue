@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-app-bar text app color="#4B0CF9">
+    <v-app-bar flat app color="#4B0CF9">
       <v-app-bar-nav-icon class="white--text" @click="drawer = !drawer">
       </v-app-bar-nav-icon>
       <v-app-bar-title shrink-on-scroll class="white--text text-uppercase">
@@ -50,14 +50,12 @@
         </v-list-item>
       </v-list>
 
-      <!-- <template v-slot:append> -->
       <div class="pa-2">
-        <v-btn dark large block text class="ivory" @click="signOut()">
+        <v-btn large block flat class="ivory" @click="signOut()">
           Logout
           <v-icon right>mdi-logout</v-icon>
         </v-btn>
       </div>
-      <!-- </template> -->
     </v-navigation-drawer>
   </nav>
 </template>
