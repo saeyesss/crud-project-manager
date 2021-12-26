@@ -1,5 +1,5 @@
 <template>
-  <div class="ma-auto" max-width="400">
+  <div class="submit-form">
     <div v-if="!submitted">
       <div class="form-group">
         <label for="title">Title</label>
@@ -8,7 +8,7 @@
           class="form-control"
           id="title"
           required
-          v-model="project.title"
+          v-model="tutorial.title"
           name="title"
         />
       </div>
@@ -19,29 +19,29 @@
           class="form-control"
           id="description"
           required
-          v-model="project.description"
+          v-model="tutorial.description"
           name="description"
         />
       </div>
 
-      <button @click="saveProject" class="btn btn-success">Submit</button>
+      <button @click="saveTutorial" class="btn btn-success">Submit</button>
     </div>
 
     <div v-else>
       <h4>You submitted successfully!</h4>
-      <button class="btn btn-success" @click="newProject">Add</button>
+      <button class="btn btn-success" @click="newTutorial">Add</button>
     </div>
   </div>
 </template>
 
 <script>
-import DataService from "../services/DataService";
+import TutorialDataService from "../services/TutorialDataService";
 
 export default {
-  name: "add-project",
+  name: "add-tutorial",
   data() {
     return {
-      project: {
+      tutorial: {
         title: "",
         description: "",
         published: false,
@@ -50,14 +50,14 @@ export default {
     };
   },
   methods: {
-    saveProject() {
+    saveTutorial() {
       var data = {
-        title: this.project.title,
-        description: this.project.description,
+        title: this.tutorial.title,
+        description: this.tutorial.description,
         published: false,
       };
 
-      DataService.create(data)
+      TutorialDataService.create(data)
         .then(() => {
           console.log("Created new item successfully!");
           this.submitted = true;
@@ -67,9 +67,9 @@ export default {
         });
     },
 
-    newProject() {
+    newTutorial() {
       this.submitted = false;
-      this.project = {
+      this.tutorial = {
         title: "",
         description: "",
         published: false,
@@ -79,4 +79,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.submit-form {
+  max-width: 300px;
+  margin: auto;
+}
+</style>

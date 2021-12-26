@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import TutorialDataService from "../services/DataService";
+import TutorialDataService from "../services/TutorialDataService";
 
 export default {
   name: "tutorial",

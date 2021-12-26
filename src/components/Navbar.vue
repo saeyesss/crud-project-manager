@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-app-bar flat app color="#4B0CF9">
+    <v-app-bar flat app color="#123456">
       <v-app-bar-nav-icon class="white--text" @click="drawer = !drawer">
       </v-app-bar-nav-icon>
       <v-app-bar-title shrink-on-scroll class="white--text text-uppercase">
@@ -18,7 +18,7 @@
       width="300"
       absolute
       temporary
-      color="#4B0CF9"
+      color="#123456"
     >
       <v-layout column align-center>
         <v-flex class="ma-5">

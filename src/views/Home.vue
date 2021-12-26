@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// import Footer from '../components/footer.vue';
 import Landing from "@/components/Landing";
 export default {
   name: "Home",

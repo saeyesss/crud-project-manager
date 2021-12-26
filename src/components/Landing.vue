@@ -16,11 +16,15 @@
             ></router-link
           >
         </div>
+        <div class="text-center pa-5 my-auto">
+          <router-link to="/About" tag="button" id="getstar"
+            ><v-btn dense dark color="#A273C6" large router :to="link2.route"
+              >About</v-btn
+            ></router-link
+          >
+        </div>
       </div>
     </div>
-    <!-- <div id="about" class="bg-light p-3 p-md-5">
-      <div class="row"></div>
-    </div> -->
   </div>
 </template>
 
@@ -30,6 +34,7 @@ export default {
   data() {
     return {
       link: [{ route: "/Login" }],
+      link2: [{ route: "/About" }],
     };
   },
 };

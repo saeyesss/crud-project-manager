@@ -1,41 +1,38 @@
 <template>
   <div class="list row">
     <div class="col-md-6">
-      <h4>Tutorials List</h4>
+      <h4>projects List</h4>
       <ul class="list-group">
         <li
           class="list-group-item"
           :class="{ active: index == currentIndex }"
-          v-for="(tutorial, index) in tutorials"
+          v-for="(project, index) in projects"
           :key="index"
-          @click="setActiveTutorial(tutorial, index)"
+          @click="setActivepProject(project, index)"
         >
-          {{ tutorial.title }}
+          {{ project.title }}
         </li>
       </ul>
     </div>
     <div class="col-md-6">
-      <div v-if="currentTutorial">
-        <tutorial-details
-          :tutorial="currentTutorial"
-          @refreshList="refreshList"
-        />
+      <div v-if="currentProject">
+        <project-details :project="currentProject" @refreshList="refreshList" />
       </div>
       <div v-else>
         <br />
-        <p>Please click on a Tutorial...</p>
+        <p>Please click on a Project</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import TutorialDataService from "../services/TutorialDataService";
-import TutorialDetails from "./Tutorial";
+import DataService from "../services/DataService";
+import ProjectDetails from "./Project";
 
 export default {
-  name: "tutorials-list",
-  components: { TutorialDetails },
+  name: "project-list",
+  components: { ProjectDetails },
   data() {
     return {
       tutorials: [],
@@ -46,12 +43,12 @@ export default {
   },
   methods: {
     onDataChange(items) {
-      let _tutorials = [];
+      let _projects = [];
 
       items.forEach((item) => {
         let id = item.id;
         let data = item.data();
-        _tutorials.push({
+        _projects.push({
           id: id,
           title: data.title,
           description: data.description,
@@ -59,21 +56,21 @@ export default {
         });
       });
 
-      this.tutorials = _tutorials;
+      this.projects = _projects;
     },
 
     refreshList() {
-      this.currentTutorial = null;
+      this.currentProject = null;
       this.currentIndex = -1;
     },
 
-    setActiveTutorial(tutorial, index) {
-      this.currentTutorial = tutorial;
+    setActiveProject(project, index) {
+      this.currentProject = project;
       this.currentIndex = index;
     },
   },
   mounted() {
-    this.unsubscribe = TutorialDataService.getAll()
+    this.unsubscribe = DataService.getAll()
       .orderBy("title", "asc")
       .onSnapshot(this.onDataChange);
   },

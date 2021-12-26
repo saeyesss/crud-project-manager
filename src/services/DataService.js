@@ -1,14 +1,14 @@
-import firebase from "../firebase";
+import firebase from "firebase/compat/app";
 
-const db = firebase.collection("/tutorials");
+const db = firebase.collection("/projects");
 
 class DataService {
   getAll() {
     return db;
   }
 
-  create(tutorial) {
-    return db.add(tutorial);
+  create(project) {
+    return db.add(project);
   }
 
   update(id, value) {

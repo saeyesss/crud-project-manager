@@ -1,6 +1,7 @@
 <template>
   <div fluid-container id="aboutbg">
     <Navbar />
+
     <div>
       <v-container>
         <v-layout>
@@ -28,31 +29,60 @@
               <v-list-item>
                 <v-list-item-content>
                   <div class="overline text-left">
-                    <h1 id="titles">BIbliography</h1>
+                    <h1 id="titles">Bibliography</h1>
                   </div>
                   <div><v-divider></v-divider></div>
-                  <div
-                    class="title text-center ml-2"
-                    style="text-align: center; background-color: white"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Dicta aliquam vel, similique optio laboriosam sequi quas
-                    libero! Impedit suscipit earum ducimus corporis eaque ipsa
-                    quae perferendis voluptatum consectetur, nostrum eum.L Lorem
-                    ipsum dolor sit amet consectetur, adipisicing elit. Ex
-                    aliquam, aspernatur quaerat nulla temporibus, cum ipsa
-                    tenetur consectetur, quidem non distinctio error! Rerum
-                    assumenda ut quia voluptatem repudiandae facilis nulla.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sapiente distinctio dicta alias, deleniti officia
-                    repudiandae? Vitae sunt pariatur eaque natus. Ipsam dicta
-                    pariatur enim delectus assumenda corporis accusantium nobis
-                    architecto. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Commodi facilis, architecto nam molestias
-                    eligendi corrupti exercitationem expedita similique quo
-                    quidem, blanditiis alias saepe eaque quae sint aliquid
-                    repellendus voluptatum laudantium.
-                  </div>
+
+                  <v-row align="center" justify="center">
+                    <v-col cols="6" md="auto">
+                      <a
+                        class="headline"
+                        id="linkcss"
+                        href="https://vuetifyjs.com/en/getting-started/installation/"
+                        >Vuetify Documentation</a
+                      >
+                    </v-col>
+                  </v-row>
+                  <v-row align="center" justify="center">
+                    <v-col cols="6" md="auto">
+                      <a
+                        class="headline"
+                        id="linkcss"
+                        href="https://firebase.google.com/docs"
+                        >Firebase Documentation</a
+                      >
+                    </v-col>
+                  </v-row>
+                  <v-row align="center" justify="center">
+                    <v-col cols="6" md="auto">
+                      <a
+                        class="headline"
+                        id="linkcss"
+                        href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"
+                        >Bootstrap</a
+                      >
+                    </v-col>
+                  </v-row>
+                  <v-row align="center" justify="center">
+                    <v-col cols="6" md="auto">
+                      <a
+                        class="headline"
+                        id="linkcss"
+                        href="https://get.headspace.com/hs-backgrounds"
+                        >Background Images from Headspace
+                      </a>
+                    </v-col>
+                  </v-row>
+                  <v-row align="center" justify="center">
+                    <v-col cols="6" md="auto">
+                      <a
+                        class="headline"
+                        id="linkcss"
+                        href=" https://materialdesignicons.com/"
+                        >Material Design Icons</a
+                      >
+                    </v-col>
+                  </v-row>
                 </v-list-item-content>
               </v-list-item>
               <v-card-actions>
@@ -68,6 +98,7 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+
 export default {
   components: {
     Navbar,
@@ -110,5 +141,17 @@ export default {
   line-height: 42px;
   text-transform: uppercase;
   text-shadow: 0 2px #ffce00, 0 3px #777;
+}
+#linkcss {
+  border-bottom: 0.05em solid #b4e7f8;
+  box-shadow: inset 0 -0.05em 0 #b4e7f8;
+  color: inherit;
+  text-decoration: none;
+}
+#linkcss a:hover,
+#linkcss a:focus,
+#linkcss a:active,
+#linkcss a {
+  background-color: #00516d;
 }
 </style>

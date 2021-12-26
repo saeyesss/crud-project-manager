@@ -4,85 +4,18 @@
     <v-flex class="align-center">
       <span> <h1 class="display-4" id="weldas">Projects</h1></span>
     </v-flex>
-    <v-container>
-      <!-- <AddProject /> -->
-      <!-- <v-layout row wrap col>
-        <v-flex sm6 xs12 md6 lg3>
-          <v-card class="ma-3">
-            <v-list-item>
-              <v-list-item-content>
-                <div class="title text-left">BMI</div>
-                <div><v-divider></v-divider></div>
-              </v-list-item-content>
-            </v-list-item>
-            <v-card-actions>
-              <div class="overline ml-2">Your BMI is : {{ bmi }}</div>
-              <v-spacer></v-spacer>
-
-              <v-flex class="align-center"><BMI /></v-flex>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-        <v-flex sm6 xs12 md6 lg3>
-          <v-card class="ma-3">
-            <v-list-item>
-              <v-list-item-content>
-                <div class="title text-left">BMR</div>
-                <div><v-divider></v-divider></div>
-              </v-list-item-content>
-            </v-list-item>
-            <v-card-actions>
-              <div class="overline ml-2">Your BMR is : {{ bmr }} (calorie)</div>
-              <v-spacer></v-spacer>
-              <v-flex class="align-center"><BMR /></v-flex>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-        <v-flex sm6 xs12 md6 lg3>
-          <v-card class="ma-3">
-            <v-list-item>
-              <v-list-item-content>
-                <div class="title text-left">Ideal Weight</div>
-                <div><v-divider></v-divider></div>
-              </v-list-item-content>
-            </v-list-item>
-            <v-card-actions>
-              <div class="overline ml-2">
-                Your Ideal Weight is : {{ bmi }} (KG)
-              </div>
-              <v-spacer></v-spacer>
-              <v-flex class="align-center"><idealw /></v-flex>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-        <v-flex sm6 xs12 md6 lg3>
-          <v-card class="ma-3">
-            <v-list-item>
-              <v-list-item-content>
-                <div class="title text-left">Body Fat</div>
-                <div><v-divider></v-divider></div>
-              </v-list-item-content>
-            </v-list-item>
-            <v-card-actions>
-              <div class="overline ml-2">Your Body fat is (%) : {{ bfp }}</div>
-              <v-spacer></v-spacer>
-              <v-flex class="align-center"><bodyfat /></v-flex>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-      </v-layout> -->
-    </v-container>
+    <v-container> </v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-// import AddProject from "@/components/AddProject";
+
 export default {
   components: {
     Navbar,
-    // AddProject,
   },
+  methods: {},
 };
 </script>
 <style scoped>
@@ -105,9 +38,9 @@ export default {
   -o-background-size: cover;
   background-size: cover;
   image-rendering: crisp-edges;
-  image-rendering: -moz-crisp-edges; /* Firefox */
-  image-rendering: -o-crisp-edges; /* Opera */
-  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
   background-position: 50% 50%;
 }
 </style>

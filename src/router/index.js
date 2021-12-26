@@ -6,7 +6,6 @@ import Login from "../components/Login";
 import About from "../views/About.vue";
 import DashboardHome from "../components/DashboardHome.vue";
 import register from "../components/register";
-
 Vue.use(VueRouter);
 
 const routes = [
