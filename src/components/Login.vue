@@ -79,6 +79,7 @@
 //
 <script>
 import firebase from "firebase/compat/app";
+import { db } from "../main";
 
 export default {
   data() {
@@ -100,7 +101,14 @@ export default {
         .signInWithEmailAndPassword(this.form.email, this.form.password)
         .then(() => {
           alert("Welcome " + " You are now logged in");
-
+        })
+        .then(() => {
+          db.collection("projects").doc(firebase.auth().currentUser.uid).set({
+            Title: "test title1",
+            Description: "test description",
+          });
+        })
+        .then(() => {
           this.$router.replace({ name: "Dashboard" });
         })
         .catch((err) => {

@@ -11,9 +11,9 @@
     </v-app-bar>
 
     <v-navigation-drawer
-      flat
       v-model="drawer"
       app
+      flat
       floating
       width="300"
       absolute

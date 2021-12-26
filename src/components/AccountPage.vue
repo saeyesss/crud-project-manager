@@ -55,6 +55,19 @@
                   Update E-mail<v-icon right>mdi-update</v-icon>
                 </v-btn>
               </div>
+              <div class="mt-5">
+                <v-text-field
+                  filled
+                  single-line
+                  label="Enter new password:"
+                  type="password"
+                  v-model="newPassword"
+                >
+                </v-text-field>
+                <v-btn light color="ivory" @click="updatePassword()">
+                  Change Password<v-icon right>mdi-update</v-icon>
+                </v-btn>
+              </div>
             </v-form>
           </v-card>
         </v-flex>
@@ -77,6 +90,7 @@ export default {
       uid: "",
       newUserName: "",
       newEmail: "",
+      newPassword: "",
     };
   },
   computed: {},
@@ -113,11 +127,22 @@ export default {
         .then(() => {
           alert("E-mail updated successfully. New E-mail: " + uemail);
         })
-
         .catch((err) => {
           alert("Error: " + err.message);
           if (err.message == "auth/requires-recent-login")
             user.reauthenticateWithCredential();
+        });
+    },
+    updatePassword() {
+      let upassword = this.newPassword;
+      var user = firebase.auth().currentUser;
+      user
+        .updatePassword(upassword)
+        .then(() => {
+          alert("Password updated successfully.");
+        })
+        .catch((err) => {
+          alert("Error: " + err.message);
         });
     },
   },

@@ -25,8 +25,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 Vue.config.productionTip = false;
 
-// export const db = firebase.firestore();
-export default firebase.firestore();
+export const db = firebase.firestore();
 
 new Vue({
   router,
