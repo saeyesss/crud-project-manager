@@ -1,6 +1,4 @@
-import firebase from "firebase/compat/app";
-
-const db = firebase.collection("/projects");
+import { db } from "../main";
 
 class DataService {
   getAll() {

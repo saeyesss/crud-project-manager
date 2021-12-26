@@ -4,8 +4,8 @@
       <v-app-bar-nav-icon class="white--text" @click="drawer = !drawer">
       </v-app-bar-nav-icon>
       <v-app-bar-title shrink-on-scroll class="white--text text-uppercase">
-        <span class="font-weight-light">SAE</span>
-        <span class="font-weight-heavy">BHIT</span>
+        <span class="font-weight-light">Project</span>
+        <span class="font-weight-heavy">Manager</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
     </v-app-bar>

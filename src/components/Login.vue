@@ -104,8 +104,8 @@ export default {
         })
         .then(() => {
           db.collection("projects").doc(firebase.auth().currentUser.uid).set({
-            Title: "test title1",
-            Description: "test description",
+            Title: "",
+            Description: "",
           });
         })
         .then(() => {
@@ -126,6 +126,14 @@ export default {
               data.user.displayName +
               ". You are now logged in with Google"
           );
+        })
+        .then(() => {
+          db.collection("projects").doc(firebase.auth().currentUser.uid).set({
+            Title: "",
+            Description: "",
+          });
+        })
+        .then(() => {
           this.$router.replace({ name: "Dashboard" });
         })
         .catch((err) => {
