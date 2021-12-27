@@ -11,7 +11,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import { firestorePlugin } from "vuefire";
 
+Vue.use(firestorePlugin);
 const firebaseConfig = {
   apiKey: "AIzaSyC-oHHH9CHBcgiaPDaG5PLYgM9rSqVBR88",
   authDomain: "crud-project-e2ef9.firebaseapp.com",

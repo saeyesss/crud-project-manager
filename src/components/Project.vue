@@ -1,6 +1,6 @@
 <template>
   <div v-if="currentProject" class="mx-auto" max-width="400">
-    <span class="headline">Projects</span>
+    <span class="headline">Project</span>
 
     <div>
       <v-text-field

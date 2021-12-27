@@ -3,23 +3,26 @@
     <Navbar />
     <v-flex class="align-center">
       <span> <h1 class="display-4" id="weldas">Projects</h1></span>
+      <span class="ma-5"> <AddProject /> </span>
     </v-flex>
     <v-container>
-      <!-- <AddProject /> -->
-
       <ProjectList />
+      <!-- <Projects /> -->
     </v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-// import AddProject from "@/components/AddProject";
+import AddProject from "@/components/AddProject";
 import ProjectList from "@/components/ProjectList";
+// import Projects from "@/components/Projects";
+
 export default {
   components: {
     Navbar,
-    // AddProject,
+    AddProject,
+    // Projects,
     ProjectList,
   },
   methods: {},
