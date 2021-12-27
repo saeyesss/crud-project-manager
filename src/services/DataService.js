@@ -1,4 +1,5 @@
 import { db } from "../main";
+import firebase from "firebase/compat/app";
 
 class DataService {
   getAll() {
@@ -6,7 +7,12 @@ class DataService {
   }
 
   create(project) {
-    return db.add(project);
+    // return db.add(project);n
+    return db
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .collection("projects")
+      .add(project);
   }
 
   update(id, value) {

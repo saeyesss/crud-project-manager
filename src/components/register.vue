@@ -72,6 +72,7 @@
 //
 <script>
 import firebase from "firebase/compat/app";
+import { db } from "../main";
 
 export default {
   data() {
@@ -93,13 +94,18 @@ export default {
             .updateProfile({
               displayName: this.form.name,
             })
-            .then((data) => {
-              alert(
-                "Account Created! User Name:" +
-                  data.user.displayName +
-                  "\nUser ID: " +
-                  data.user.uid
-              );
+            .then(() => {
+              alert("Account Created!");
+            })
+            .then(() => {
+              db.collection("users")
+                .doc(firebase.auth().currentUser.uid)
+                .collection("projects")
+                .doc("demo")
+                .set({
+                  Title: "",
+                  Description: "",
+                });
             })
             .then(() => {
               this.$router.replace({ name: "Login" });

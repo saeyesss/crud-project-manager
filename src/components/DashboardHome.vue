@@ -4,16 +4,23 @@
     <v-flex class="align-center">
       <span> <h1 class="display-4" id="weldas">Projects</h1></span>
     </v-flex>
-    <v-container> </v-container>
+    <v-container>
+      <!-- <AddProject /> -->
+
+      <ProjectList />
+    </v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
-
+// import AddProject from "@/components/AddProject";
+import ProjectList from "@/components/ProjectList";
 export default {
   components: {
     Navbar,
+    // AddProject,
+    ProjectList,
   },
   methods: {},
 };

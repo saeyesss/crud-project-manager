@@ -103,12 +103,6 @@ export default {
           alert("Welcome " + " You are now logged in");
         })
         .then(() => {
-          db.collection("projects").doc(firebase.auth().currentUser.uid).set({
-            Title: "",
-            Description: "",
-          });
-        })
-        .then(() => {
           this.$router.replace({ name: "Dashboard" });
         })
         .catch((err) => {
@@ -128,10 +122,14 @@ export default {
           );
         })
         .then(() => {
-          db.collection("projects").doc(firebase.auth().currentUser.uid).set({
-            Title: "",
-            Description: "",
-          });
+          db.collection("users")
+            .doc(firebase.auth().currentUser.uid)
+            .collection("projects")
+            .doc("demo")
+            .set({
+              Title: "",
+              Description: "",
+            });
         })
         .then(() => {
           this.$router.replace({ name: "Dashboard" });

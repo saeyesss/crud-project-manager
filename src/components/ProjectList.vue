@@ -1,5 +1,5 @@
 <template>
-  <div class="list row">
+  <v-app class="list row">
     <div class="col-md-6">
       <h4>projects List</h4>
       <ul class="list-group">
@@ -23,7 +23,7 @@
         <p>Please click on a Project</p>
       </div>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>

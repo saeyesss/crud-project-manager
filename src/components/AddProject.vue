@@ -1,37 +1,68 @@
 <template>
-  <div class="ma-auto" max-width="400">
-    <div v-if="!submitted">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          required
-          v-model="project.title"
-          name="title"
-        />
-      </div>
+  <v-dialog max-width="400">
+    <template v-slot:activator="{ on }">
+      <v-btn
+        slot="activator"
+        outlined
+        color="blue lighten-3"
+        dark
+        v-on="on"
+        small
+        >Add Project</v-btn
+      >
+    </template>
 
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input
-          class="form-control"
-          id="description"
-          required
-          v-model="project.description"
-          name="description"
-        />
-      </div>
+    <v-flex>
+      <v-card
+        height="100%"
+        max-width="400"
+        elevation="6"
+        dark
+        color="#0C6FF9"
+        class="mx-auto"
+      >
+        <v-card-title>
+          <span class="font-size-heavy display-1">
+            New Project
+          </span></v-card-title
+        >
 
-      <button @click="saveProject" class="btn btn-success">Submit</button>
-    </div>
+        <v-main class="ma-auto container">
+          <div v-if="!submitted">
+            <v-text-field
+              type="text"
+              label="Title"
+              id="title"
+              required
+              filled
+              class="pa-3"
+              v-model="project.title"
+              name="title"
+            >
+            </v-text-field>
 
-    <div v-else>
-      <h4>You submitted successfully!</h4>
-      <button class="btn btn-success" @click="newProject">Add</button>
-    </div>
-  </div>
+            <v-textarea
+              id="description"
+              required
+              filled
+              class="pa-3"
+              v-model="project.description"
+              name="description"
+              label="Description"
+            ></v-textarea>
+
+            <v-btn class="white ml-15" light @click="saveProject()"
+              ><v-icon left>mdi-content-save</v-icon> Submit
+            </v-btn>
+          </div>
+          <div v-else>
+            <h4>You submitted successfully!</h4>
+            <v-btn class="btn btn-success" @click="newProject()">Add</v-btn>
+          </div>
+        </v-main>
+      </v-card>
+    </v-flex>
+  </v-dialog>
 </template>
 
 <script>
@@ -59,11 +90,11 @@ export default {
 
       DataService.create(data)
         .then(() => {
-          console.log("Created new item successfully!");
+          alert("Created new item successfully!");
           this.submitted = true;
         })
         .catch((e) => {
-          console.log(e);
+          alert("Error: " + e);
         });
     },
 
