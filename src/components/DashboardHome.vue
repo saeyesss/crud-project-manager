@@ -6,8 +6,8 @@
       <span class="ma-5"> <AddProject /> </span>
     </v-flex>
     <v-container>
-      <ProjectList />
-      <!-- <Projects /> -->
+      <!-- <ProjectList /> -->
+      <Projects />
     </v-container>
   </v-app>
 </template>
@@ -15,15 +15,15 @@
 <script>
 import Navbar from "@/components/Navbar";
 import AddProject from "@/components/AddProject";
-import ProjectList from "@/components/ProjectList";
-// import Projects from "@/components/Projects";
+// import ProjectList from "@/components/ProjectList";
+import Projects from "@/components/Projects";
 
 export default {
   components: {
     Navbar,
     AddProject,
-    // Projects,
-    ProjectList,
+    Projects,
+    // ProjectList,
   },
   methods: {},
 };

@@ -3,14 +3,15 @@ import firebase from "firebase/compat/app";
 
 class DataService {
   getAll() {
-    return db
+    const ref = db
       .collection("users")
       .doc(firebase.auth().currentUser.uid)
-      .collection("projects");
+      .collection("projects")
+      .get();
+    return ref;
   }
 
   create(project) {
-    // return db.add(project);n
     return db
       .collection("users")
       .doc(firebase.auth().currentUser.uid)

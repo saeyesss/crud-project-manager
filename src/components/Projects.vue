@@ -5,6 +5,7 @@
         <v-card class="ma-3">
           <div class="overline text-left">
             <h1 id="titles">Projects</h1>
+            <div>{{ getData() }}</div>
           </div>
           <div><v-divider></v-divider></div>
           <v-card-actions> </v-card-actions>
@@ -25,9 +26,27 @@ export default {
     };
   },
   methods: {
-    getData() {
+    onDataChange(items) {
       let _projects = [];
-      _projects = DataService.getAll().onSnapshot(this.onDataChange);
+
+      items.forEach((item) => {
+        let id = item.id;
+        let data = item.data();
+        _projects.push({
+          id: id,
+          title: data.title,
+          description: data.description,
+          published: data.published,
+        });
+      }, console.log(_projects));
+
+      this.projects = _projects;
+    },
+
+    getData() {
+      // DataService.getAll()
+      // .onSnapshot(this.onDataChange);
+      console.log(DataService.getAll().onSnapshot(this.onDataChange));
     },
   },
 };

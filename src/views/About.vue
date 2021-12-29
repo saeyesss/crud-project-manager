@@ -32,57 +32,58 @@
                     <h1 id="titles">Bibliography</h1>
                   </div>
                   <div><v-divider></v-divider></div>
-
-                  <v-row align="center" justify="center">
-                    <v-col cols="6" md="auto">
-                      <a
-                        class="headline"
-                        id="linkcss"
-                        href="https://vuetifyjs.com/en/getting-started/installation/"
-                        >Vuetify Documentation</a
-                      >
-                    </v-col>
-                  </v-row>
-                  <v-row align="center" justify="center">
-                    <v-col cols="6" md="auto">
-                      <a
-                        class="headline"
-                        id="linkcss"
-                        href="https://firebase.google.com/docs"
-                        >Firebase Documentation</a
-                      >
-                    </v-col>
-                  </v-row>
-                  <v-row align="center" justify="center">
-                    <v-col cols="6" md="auto">
-                      <a
-                        class="headline"
-                        id="linkcss"
-                        href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"
-                        >Bootstrap</a
-                      >
-                    </v-col>
-                  </v-row>
-                  <v-row align="center" justify="center">
-                    <v-col cols="6" md="auto">
-                      <a
-                        class="headline"
-                        id="linkcss"
-                        href="https://get.headspace.com/hs-backgrounds"
-                        >Background Images from Headspace
-                      </a>
-                    </v-col>
-                  </v-row>
-                  <v-row align="center" justify="center">
-                    <v-col cols="6" md="auto">
-                      <a
-                        class="headline"
-                        id="linkcss"
-                        href=" https://materialdesignicons.com/"
-                        >Material Design Icons</a
-                      >
-                    </v-col>
-                  </v-row>
+                  <div class="link9">
+                    <v-row align="center" justify="center">
+                      <v-col cols="6" md="auto">
+                        <a
+                          class="headline"
+                          id="linkcss"
+                          href="https://vuetifyjs.com/en/getting-started/installation/"
+                          >Vuetify Documentation</a
+                        >
+                      </v-col>
+                    </v-row>
+                    <v-row align="center" justify="center">
+                      <v-col cols="6" md="auto">
+                        <a
+                          class="headline"
+                          id="linkcss"
+                          href="https://firebase.google.com/docs"
+                          >Firebase Documentation</a
+                        >
+                      </v-col>
+                    </v-row>
+                    <v-row align="center" justify="center">
+                      <v-col cols="6" md="auto">
+                        <a
+                          class="headline"
+                          id="linkcss"
+                          href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"
+                          >Bootstrap</a
+                        >
+                      </v-col>
+                    </v-row>
+                    <v-row align="center" justify="center">
+                      <v-col cols="6" md="auto">
+                        <a
+                          class="headline"
+                          id="linkcss"
+                          href="https://get.headspace.com/hs-backgrounds"
+                          >Background Images from Headspace
+                        </a>
+                      </v-col>
+                    </v-row>
+                    <v-row align="center" justify="center">
+                      <v-col cols="6" md="auto">
+                        <a
+                          class="headline"
+                          id="linkcss"
+                          href=" https://materialdesignicons.com/"
+                          >Material Design Icons</a
+                        >
+                      </v-col>
+                    </v-row>
+                  </div>
                 </v-list-item-content>
               </v-list-item>
               <v-card-actions>
@@ -142,7 +143,7 @@ export default {
   text-transform: uppercase;
   text-shadow: 0 2px #ffce00, 0 3px #777;
 }
-#linkcss {
+/* #linkcss {
   border-bottom: 0.05em solid #b4e7f8;
   box-shadow: inset 0 -0.05em 0 #b4e7f8;
   color: inherit;
@@ -153,5 +154,18 @@ export default {
 #linkcss a:active,
 #linkcss a {
   background-color: #00516d;
+} */
+.link9 a {
+  color: inherit;
+  text-decoration: none;
+  box-shadow: inset 0 -0.125em 0 0 #ddd;
+
+  transition-property: color;
+  transition-duration: 0.25s;
+  trasition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+
+.link9 a:hover {
+  color: #ccc;
 }
 </style>
