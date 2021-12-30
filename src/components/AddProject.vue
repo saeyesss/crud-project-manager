@@ -18,7 +18,7 @@
         max-width="400"
         elevation="6"
         dark
-        color="#0C6FF9"
+        color="#235191"
         class="mx-auto"
       >
         <v-card-title>
@@ -51,13 +51,13 @@
               label="Description"
             ></v-textarea>
 
-            <v-btn class="white ml-15" light @click="saveProject()"
+            <v-btn class="white ma-5" light @click="saveProject()"
               ><v-icon left>mdi-content-save</v-icon> Submit
             </v-btn>
           </div>
           <div v-else>
-            <h4>You submitted successfully!</h4>
-            <v-btn class="btn btn-success" @click="newProject()">Add</v-btn>
+            <h4 class="ml-5 mb-5">You submitted successfully!</h4>
+            <v-btn class="white ma-5" light @click="newProject()">Add</v-btn>
           </div>
         </v-main>
       </v-card>

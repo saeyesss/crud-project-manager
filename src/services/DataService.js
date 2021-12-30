@@ -20,11 +20,21 @@ class DataService {
   }
 
   update(id, value) {
-    return db.doc(id).update(value);
+    return db
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .collection("projects")
+      .doc(id)
+      .update(value);
   }
 
   delete(id) {
-    return db.doc(id).delete();
+    return db
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .collection("projects")
+      .doc(id)
+      .delete();
   }
 }
 

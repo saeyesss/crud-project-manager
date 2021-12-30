@@ -5,7 +5,6 @@
         <v-card class="ma-3">
           <div class="overline text-left">
             <h1 id="titles">Projects</h1>
-            <div>{{ getData() }}</div>
           </div>
           <div><v-divider></v-divider></div>
           <v-card-actions> </v-card-actions>
@@ -44,9 +43,8 @@ export default {
     },
 
     getData() {
-      // DataService.getAll()
-      // .onSnapshot(this.onDataChange);
-      console.log(DataService.getAll().onSnapshot(this.onDataChange));
+      DataService.getAll().onSnapshot(this.onDataChange);
+      // console.log(DataService.getAll().onSnapshot(this.onDataChange));
     },
   },
 };

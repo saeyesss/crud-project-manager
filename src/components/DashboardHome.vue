@@ -3,7 +3,7 @@
     <Navbar />
     <v-flex class="align-center">
       <span> <h1 class="display-4" id="weldas">Projects</h1></span>
-      <span class="ma-5"> <AddProject /> </span>
+      <span class="ma-15"> <AddProject /> </span>
     </v-flex>
     <v-container>
       <!-- <ProjectList /> -->
