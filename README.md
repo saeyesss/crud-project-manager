@@ -4,21 +4,15 @@
 ```
 npm install
 ```
-
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Description
+___
+A Vue.js and Firebase Cloud
+Firestore-based web application that enables users to keep
+track of ongoing projects.
+Implementing CRUD functions and getting to know the
+common pitfalls of modern web development with a
+framework was the goal here.
